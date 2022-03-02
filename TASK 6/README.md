@@ -27,7 +27,7 @@ All your students' code. In a single place. In realtime***
 - Integrated audio and video conferencing, screen sharing, and recording to take your class 100% online
 
 ---
-## **`DEMO CODE`**
+>## **`DEMO CODE`**
 ---
 ```
 
