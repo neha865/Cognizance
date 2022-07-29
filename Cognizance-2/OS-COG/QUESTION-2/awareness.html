@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>awareness</title>
+    <style>
+        * {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+        body {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+          background-color:#07261b;
+        }
+        
+        .topnav {
+          overflow: hidden;
+        }
+        
+        .topnav a {
+          float:left;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        
+        .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+        
+        .topnav a.active {
+          background-color:#07261b;
+          color: white;
+        }
+        .icon{
+            color:red;
+            text-shadow: #ddd;
+        }
+        .topnav a.icon{
+            background-color:#07261b;
+            color: white;
+        }
+        #faq{
+             color:aliceblue;
+        }
+        .link{
+            color:#ddd;
+        }
+        .faqs{
+            background-color:red;
+            color:whitesmoke;
+            padding:100px 100px;
+            padding-left:100px;
+            display:inline-block;
+            vertical-align:top;
+            border-radius: 10px;
+            border-style:double;
+        }
+        * {
+            box-sizing: border-box;
+          }
+          
+          .column {
+            float: left;
+            width: 33.33%;
+            padding: 10px;
+            height: 300px; 
+          }
+        
+          .row:after {
+            content: "";
+            display: table;
+            clear: both;
+          }
+        </style>
+    </head>
+<body>
+        
+    <div class="topnav">
+        <a class="icon" href="#">❌ Stop Plastic</a>
+        <a class="active" href="#home">🔴Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">The facts</a>
+        <a href="#faq">FAQ</a>
+        <a href="#about">The foundation</a>
+      </div>
+      <br><br><br><br>
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="https://www.cms.int/sites/default/files/news_featured_image/A_herd_of_40_wild_elephants_at_Ampara.jpg" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/7CAE/production/_123481913_turtle_getty.jpg" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="https://cdn.givingcompass.org/wp-content/uploads/2018/10/04155651/10-Facts-About-Plastic-Pollution-You-Absolutely-Need-to-Know.jpg" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+            <br><br><br><br><br><br><br>
+      <div> 
+      <img align="right" src="https://images.news18.com/ibnlive/uploads/2021/07/1625246291_plastic-new1.jpg" width="700" height="600" > 
+      <center><h1 style="color:red;font-size:100px">FAQ</h1>
+      <p id="faq">We've asked experts from across the<br>
+        globe to share the belief that despite<br>
+        the sheer mass of plastic entering our<br>
+        oceans, plastic pollution is a problem<br>
+        we can solve. They provide insights on<br>
+        the presence of toxic chemicals in<br>
+        single-use plastic food packaging, on<br>
+        how microplastics impact our food<br>
+        chain, and on the deployment of<br>
+        successful Zero Waste systems in the<br>
+        Global South. They share a multitude<br>
+        of innovations, from refill systems<br>
+        using the "milkman" model to<br>
+        alternative products made from paper,<br>
+        wood, algae, glass, and stainless steel.<br>
+        <a style="color:tomato;font-size:25px" href="#faq1">--> for FAQ's</a></p></center>
+        
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <div class="faqs" id="faq1">
+        <div>
+        <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size:50px">Is the demand for plastic<br>
+        growing or declining?</span></div><br>
+        <div class="row">
+            <div class="column">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_DMO7QbjlkNbNVYaq-Bh4mLqisrK28bPAig&usqp=CAU" width="400" height="300" align="left"> 
+            </div>
+            <div class="column" style="padding:50px;">
+              <p>The global plastic market size was<br>
+                valued at USD 568.9 billion in 2019 and<br>
+                is expected to grow at a compound<br>
+                annual growth rate (CAGR) of 3.2%<br>
+                from 2020 to 2027. Increasing plastic<br>
+                consumption in the construction,<br>
+                automotive, and electrical and<br>
+                electronics industries is projected to<br>
+                drive the market for plastic over the<br>
+                forecast period.</p>
+            </div>
+            <div class="column" style="padding:50px;">
+                <p>Regulations to decrease gross vehicle
+            weight to improve fuel efficiency and
+            eventually reduce carbon emissions
+            have promoted the use of plastics as a
+            substitute to metals, including
+            aluminum and steel, for the
+            manufacturing of automotive
+            components. This is further expected
+            to favor the rising demand for plastics
+            in automotive applications over the
+            forecast period.</p>
+              </div>
+          </div>
+    </div>
+    <div class="faqs" id="faq1">
+        <div>
+        <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size:50px">Why are single-use plastics
+            different from refillable or<br>
+            reusable food ware?</span></div><br>
+        <div class="row">
+            <div class="column">
+                <img src="https://2z2uy32ofddf3z9ep91ninb4-wpengine.netdna-ssl.com/wp-content/uploads/Single-Use-Article_Tile-2.jpg" width="400" height="300" align="left"> 
+            </div>
+            <div class="column" style="padding:50px;">
+              <p>Consumers benefit from the advantages <br>
+                  in cost, convenience and energy efficiency <br>
+                  that single-use items provide. But using <br>
+                  items like plastic shopping bags, bottles,<br>
+                   utensils and straws requires users to commit<br>
+                    to disposing of them properly—whether that <br>
+                    means recycling them or, at the very least, <br>
+                    ensuring they make their way into a proper <br>
+                    waste receptacle.</p>
+            </div>
+            <div class="column" style="padding:50px;">
+                <p>In the late 1970s and 1980s,plastic <br>
+                    bags were introduced for specific reasons.<br>
+                    Disposable plastic early being cut down <br>
+                    in order to produce paper bags,<br>
+                     which were more common at the time. <br>
+                     Ever since then, the process of making these <br>
+                     products has gotten more efficient.</p>
+              </div>
+          </div>
+    </div>
+    <div class="faqs" id="faq1">
+        <div>
+        <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size:50px">What are 5 facts about<br>
+            plastic pollution?</span></div><br>
+        <div class="row">
+            <div class="column">
+                <img src="https://www.conserve-energy-future.com/wp-content/uploads/2015/11/Plastic-bottles-lying-on-a-beach.jpg" width="400" height="300" align="left"> 
+            </div>
+            <div class="column" style="padding:50px;">
+              <ul>
+                  <li>Only 9% of all plastic produced is recycled.</li>
+                  <li>A whopping 2 million plastic bags are used every minute worldwide.</li>
+                  <li>Single-use plastics are illegal in some parts of the world.</li>
+              </ul>
+            </div>
+            <div class="column" style="padding:50px;">
+                <ul>
+                    <li>Every minute of every day a truckload of plastic is dumped into the ocean.</li>
+                    <li>73% of beach litter worldwide is plastic.</li>
+                    <li>It is Overused.</li>
+                </ul>
+              </div>
+          </div>
+    </div>
+</body>
+</html>
